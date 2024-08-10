@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #7d56f3;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wraper {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    grid-gap: 25px;
+    padding: 22px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 6px 3px #00000057;
+    margin-bottom: 20px;
+}
+
+.input-wraper input, button {
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.input-wraper input {
+    background-color: #98589878;
+    border: 0px;
+}
+
+.input-wraper button {
+    border: 0px;
+    background: #7500ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.output_wraper {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.output_wraper div {
+    width: 25%;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.output_wraper span {
+    font-size: 16px;
+} 
+
+
+
+/* Responsive 
+===========================
+===========================
+*/
+@media (max-width: 991px) { 
+    .output_wraper div {
+        width: 30%;
+    }
+ }
+/* ===================
+====================== */
+ @media (max-width: 761px) { 
+    .container {
+        width: 80%;
+    }
+    
+    .input-wraper {
+        display: initial;
+        padding: 8px 10px;
+    }
+    
+    .input-wraper input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    .output_wraper div {
+        padding: 10px 0px;
+    }
+ }
