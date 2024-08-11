@@ -1,45 +1,5 @@
-// let ageCalculate = () => {
-//     const today = new Date();
-//     const inputDate = new Date(document.getElementById("date_input").value);
-
-//     const birthDateLis = {
-//         date : inputDate.getDate(),
-//         month : inputDate.getMonth() + 1,
-//         years : inputDate.getFullYear(),
-//     }
-
-//     const curentYear = today.getFullYear();
-//     const curentMonth = today.getMonth() + 1;
-//     const curentDate = today.getDate();
-
-//     if(isFutureDate(birthDateLis, curentYear, curentMonth, curentDate)){
-//         alert("Not Born Yet");
-//         displayResult("-", "-", "-");
-//         return;
-//     }
-
-//     const {years, month, days} = calculateAge(
-//         birthDateLis,
-//         curentYear,
-//         curentMonth,
-//         curentDate
-//     );
-
-//     displayResult(days, month, years);
-// }
-
-// const isFutureDate = (birthDateLis, curentYear, curentMonth, curentDate) => {
-//     return (
-//         birthDateLis.years > curentYear ||
-
-//     )
-// };
-
-
-// document.getElementById("calculate_btn").addEventListener("click", ageCalculate);
-
-
 let userInput = document.getElementById("date_input");
+// splite ar majkany "T" and [0] kano use kora holo??
 userInput.max = new Date().toISOString().split("T")[0];
 
 let displayYears = document.getElementById("years");
@@ -49,7 +9,7 @@ let displayDays = document.getElementById("days");
 function calculateAge() {
     let birthDate = new Date(userInput.value);
 
-    let d1 = birthDate.getDate();
+    let d1 = birthDate.getDate();   
     let m1 = birthDate.getMonth() + 1;
     let y1 = birthDate.getFullYear();
     
@@ -63,6 +23,7 @@ function calculateAge() {
 
     y3 = y2 - y1;
 
+    // ai logic ta kivaby kaj korcy??
     if(m2 >= m1){
         m3 = m2 - m1;
     }else{
@@ -88,6 +49,7 @@ function calculateAge() {
 
 }
 
+// ai function ta kivaby kaj korcy??
 function getDaysinMonth(year, month) {
     return new Date(year, month, 0).getDate();
 }
